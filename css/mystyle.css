@@ -1,0 +1,64 @@
+#mynav a{
+	font-size: 20px;
+	font-weight: bold;
+}
+#mynav li a:hover{ 
+	color: #2c2c54;
+}
+.overlay{
+
+	display: block;
+	box-sizing: border-box;
+	color: black;
+	position: absolute;
+	bottom: 15%;
+	text-align: left;
+}
+.post::after{
+	content: "";
+	width: 120px;
+	height: 1px;
+	background: rgba(0,0,0,0.5);
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 3px;
+}
+
+.c_color{
+	background: #cecece;
+	margin-left: 20px;
+}
+
+.line{
+	content: "";
+	width: 50%;
+	height: 3px;
+	background: #84817a;
+	display: inline-block;
+}
+.c_padding{
+	padding-bottom: 20px;
+}
+#tabs_nav li{
+	padding: 5px 0px;
+}
+#social-logos i{
+	font-size: 20px;
+	padding: 10px 10px;
+}
+
+.footer{
+	color: white;
+	background: rgb(79, 74, 60);
+}
+.footer-top{
+	background: rgb(233, 236, 239);
+}
+.footer-top ul{
+	list-style: none; 
+	padding-left: 10px;
+}
+.footer-top ul li{
+	padding: 5px 0;
+}
+

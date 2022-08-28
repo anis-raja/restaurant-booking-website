@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My_First_Project</title>
+
+	<link rel="stylesheet" href="css/mystyle.css">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+	<link rel="stylesheet" href="helping_files/font-awesome-4.7.0/css/font-awesome.min.css">
+
+	<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+	<script src="helping_files/jquery-3.6.0.min.js"></script>
+
+	<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
+	<script src="helping_files/bootstrap.bundle.js"></script>
+
+	<link rel="stylesheet" href="helping_files/bootstrap.min.css">
+	
+	<script>
+		$(function(){
+			$("#mymodal").modal();
+		});
+	</script>
+
+</head>
+<body style="background: #d1ccc0;">
+
+	<!-- navbar -->
+	<nav id="mynav" class="container navbar navbar-expand-md navbar-light">
+		<a class="navbar-brand" href=""><img src="img/logo.png" alt="brand_logo" width="60px" height="60px"></a>
+		<button class="navbar-toggler" data-toggle="collapse" data-target="#mynavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="mynavbar">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a href="#home" class="nav-link">Home</a>
+				</li>
+				<li class="nav-item">
+					<a href="#about" class="nav-link">About</a>
+				</li>
+				<li class="nav-item">
+					<a href="#feature" class="nav-link">Feature</a>
+				</li>
+				<li class="nav-item">
+					<a href="#gallery" class="nav-link">Gallery</a>
+				</li>
+				<li class="nav-item">
+					<a href="#pricing" class="nav-link">Pricing</a>
+				</li>
+				<li class="nav-item">
+					<a href="#blog" class="nav-link">Blog</a>
+				</li>
+				<li class="nav-item">
+					<a href="#contact" class="nav-link">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- slides/carousel -->
+	<div id="myslides" class="carousel slide" data-ride="carousel">
+		<ul class="carousel-indicators">
+			<li data-target="#myslides" data-slide-to="0" class="active"></li>
+			<li data-target="#myslides" data-slide-to="1"></li>
+			<li data-target="#myslides" data-slide-to="2"></li>
+		</ul>
+		<div class="carousel-inner">
+			<div class="carousel-item active" data-interval="2500">
+				<img src="img/background_1.jpg" alt="carousel-image" class="d-block w-100">
+				<div class="container">
+					<div class="overlay">
+						<h1 class="" style="font-size: 4vw; font-weight: 600">Welcome to FoodCircles</h1>
+						<div style="font-size: 2vw;">Delivering great food for more than 12 years!</div>
+						<div class="d-flex justify-content-end">
+							<button class="btn btn-outline-dark mt-2 ml-auto" style="font-size: 2vw; border-radius: 5rem">OUR MENU</button>
+							<button class="btn btn-success mt-2 ml-2" style="font-size: 2vw; border-radius: 5rem">BOOK A TABLE</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-item" data-interval="2500">
+				<img src="img/background_2.jpg" alt="carousel-image" class="d-block w-100">
+			</div>
+			<div class="carousel-item" data-interval="2500">
+				<img src="img/background_3.jpg" alt="carousel-image" class="d-block w-100">
+			</div>
+		</div>
+		<a href="#myslides" class="carousel-control-prev" data-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+		</a>
+		<a href="#myslides" class="carousel-control-next" data-slide="next">
+			<span class="carousel-control-next-icon"></span>
+		</a>
+	</div>
+
+	<!-- Jumbotron -->
+	<div class="container-fluid jumbotron">
+		<div class="container">
+			<div class="row ">
+				<div class="col-md-8">
+					<h3>This is jumbotron</h3>
+					<p class="lead text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque iste facilis ipsam officia molestiae corrupti molestias nostrum at, repellendus, amet fugit incidunt nesciunt itaque commodi eveniet, voluptatum sapiente nemo, id.</p>
+				</div>
+				<div class="col-md-4 m-auto">
+					<button class="btn btn-outline-secondary btn-lg d-block mx-auto" data-toggle="modal" data-target="#mymodal">Modal dialog</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- tab-content-here -->
+	<div id="tab-container" class="container py-5">
+		<h5 class="post">SPECIALS</h5>
+		<h4 class="font-weight-bold mb-3">Check Our Specials</h4>
+		<div class="row">
+			<div class="col-sm-5 col-md-3 col-4">
+				<ul id="tabs_nav" class="nav flex-column">
+					<li class="nav-item"><a href="#tab_1" class="nav-link btn btn-outline-secondary active" data-toggle="tab">Lorem ipsum</a></li>
+					<li class="nav-item"><a href="#tab_2" class="nav-link btn btn-outline-secondary" data-toggle="tab">amet elit</a></li>
+					<li class="nav-item"><a href="#tab_3" class="nav-link btn btn-outline-secondary" data-toggle="tab">dolor sit</a></li>
+					<li class="nav-item"><a href="#tab_4" class="nav-link btn btn-outline-secondary" data-toggle="tab">consectetur</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-7 col-md-9 col-8">
+				<div class="tab-content">
+					<div id="tab_1" class="tab-pane active">
+						<div class="row">
+							<div class="col-md-7 col-xl-8 order-md-0 order-1 text-justify mt-3">
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, laboriosam alias, eos nulla quae tempora at, reiciendis unde nostrum, accusamus culpa veniam atque quasi qui assumenda. Earum fugiat odio ea alias commodi blanditiis dolores ipsam.
+							</div>
+
+							<div class="col-md-5 col-xl-4 align-self-center text-center p-0 m-0">
+								<div class="col-8 col-md-12 mx-auto">
+								  <img class="w-100" src="img/specials-1.png" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="tab_2" class="tab-pane">
+						<div class="row">
+							<div class="col-md-7 col-xl-8 order-md-0 order-1 text-justify mt-3">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam repudiandae doloremque fuga obcaecati possimus. Ratione aliquid minus error nulla vero velit eveniet temporibus omnis totam, voluptates soluta libero atque inventore ad laboriosam architecto, iusto possimus.
+							</div>
+
+							<div class="col-md-5 col-xl-4 align-self-center text-center p-0 m-0">
+								<div class="col-8 col-md-12 mx-auto">
+								  <img class="w-100" src="img/specials-2.png" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="tab_3" class="tab-pane">
+						<div class="row">
+							<div class="col-md-7 col-xl-8 order-md-0 order-1 text-justify mt-3">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias quis voluptates libero exercitationem minima autem aliquam delectus animi eum praesentium deserunt quibusdam, nihil amet non, ratione itaque. Vero totam dolor ducimus fugiat nostrum aperiam. Quo.
+							</div>
+
+							<div class="col-md-5 col-xl-4 align-self-center text-center p-0 m-0">
+								<div class="col-8 col-md-12 mx-auto">
+								  <img class="w-100" src="img/specials-3.png" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="tab_4" class="tab-pane">
+						<div class="row">
+							<div class="col-md-7 col-xl-8 order-md-0 order-1 text-justify mt-3">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. A animi ab voluptatem totam sit inventore ut eos velit voluptates? Ipsum quidem praesentium pariatur incidunt eveniet. Necessitatibus incidunt repudiandae dicta eius deleniti repellat perspiciatis fugiat quaerat.
+							</div>
+
+							<div class="col-md-5 col-xl-4 align-self-center text-center p-0 m-0">
+								<div class="col-8 col-md-12 mx-auto">
+								  <img class="w-100" src="img/specials-4.png" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="w-100 text-center mb-3">
+		<span class="line"></span>
+	</div>
+
+	<!-- form to book table in Restaurant -->
+	<div class="container py-4">
+		<h5 class="post">RESERVATION</h5>
+		<h4 class="font-weight-bold mb-3">Book a Table</h4>
+		<div class="row">
+			<div class="col-sm-4 form-group">
+				<input class="form-control" type="text" placeholder="Your Name">
+			</div>
+			<div class="col-sm-4 form-group">
+				<input class="form-control" type="email" placeholder="Your Email">
+			</div>
+			<div class="col-sm-4 form-group">
+				<input class="form-control" type="phone" placeholder="Your Phone">
+			</div>
+			<div class="col-sm-4 form-group">
+				<input class="form-control" type="date" placeholder="Date">
+			</div>
+			<div class="col-sm-4 form-group">
+				<input class="form-control" type="text" placeholder="Time">
+			</div>
+			<div class="col-sm-4 form-group">
+				<input class="form-control" type="number" placeholder="# of people">
+			</div>
+			<div class="col-12 form-group">
+				<textarea class="form-control" placeholder="Message"></textarea>
+			</div>
+			<div class="col text-center">
+				<button class="btn text-white" type="submit" style="background: #18518e; font-size: 3.5vh; border-radius: 5rem">Book a Table</button>
+			</div>
+		</div>
+	</div>
+  </div>
+
+	<div class="w-100 text-center my-4">
+		<span class="line"></span>
+	</div>
+
+	<!-- card -->
+	<div class="container mt-3">
+		<h5 class="post">CHEFS</h5>
+		<h4 class="font-weight-bold mb-3">Our Professional Chefs</h4>
+		<div class="row justify-content-center">
+			<div class="c_padding col-lg-3 col-md-4 col-sm-6">
+				<img src="img/chefs-1.jpg" alt="" class="w-100 card-img-top">
+				<div class="card">
+					<div class="card-body">
+						<b class="card-title">Walter White</b>
+					</div>
+					<div class="card-footer text-center">
+						<div id="social-logos">
+	  						<a href="javascript:void(0)" class="text-dark"><i class="fa fa-facebook"></i></a>
+		  					<a href="javascript:void(0)" class="text-dark"><i class="fa fa-instagram"></i></a>
+		  					<a href="javascript:void(0)" class="text-dark"><i class="fa fa-linkedin"></i></a>
+		  					<a href="javascript:void(0)" class="text-dark"><i class="fa fa-twitter"></i></a>
+	  					</div>
+					</div>
+				</div>
+			</div>
+			<div class="c_padding col-lg-3 col-md-4 col-sm-6">
+				<img src="img/chefs-2.jpg" alt="" class="w-100 card-img-top">
+				<div class="card">
+					<div class="card-body">
+						<b class="card-title">William Dar</b>
+					</div>
+					<div class="card-footer text-center">
+						<div id="social-logos">
+	  						<a href="javascript:void(0)" class="text-dark"><i class="fa fa-facebook"></i></a>
+		  					<a href="javascript:void(0)" class="text-dark"><i class="fa fa-instagram"></i></a>
+		  					<a href="javascript:void(0)" class="text-dark"><i class="fa fa-linkedin"></i></a>
+		  					<a href="javascript:void(0)" class="text-dark"><i class="fa fa-twitter"></i></a>
+	  					</div>
+					</div>
+				</div>
+			</div>
+			<div class="c_padding col-lg-3 col-md-4 col-sm-6">
+				<img src="img/chefs-3.jpg" alt="" class="w-100 card-img-top">
+				<div class="card">
+					<div class="card-body">
+						<b class="card-title">John Smith</b>
+					</div>
+					<div class="card-footer text-center">
+						<div id="social-logos">
+	  						<a href="javascript:void(0)" class="text-dark"><i class="fa fa-facebook"></i></a>
+		  					<a href="javascript:void(0)" class="text-dark"><i class="fa fa-instagram"></i></a>
+		  					<a href="javascript:void(0)" class="text-dark"><i class="fa fa-linkedin"></i></a>
+		  					<a href="javascript:void(0)" class="text-dark"><i class="fa fa-twitter"></i></a>
+	  					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="w-100 text-center my-4">
+		<span class="line"></span>
+	</div>
+
+  <!-- FAQs -->
+  <div id="myaccordion" class="container my-5">
+  	<h5 class="post">FAQs</h5>
+	<h4 class="font-weight-bold mb-3">General Qreries</h4>
+  	<div class="card " >
+	  	<div class="card-header ">
+	  		<button class="btn btn-block text-left" data-toggle="collapse" data-target="#collapse_1"><b>Q.</b> WHAT IS FOODCIRCLES AND WHAT DOES FOODCIRCLES DO?</button>
+	  	</div>
+	  	<div id="collapse_1" class="c_color collapse show" data-parent="#myaccordion">
+	  		<div class="card-body text-left ml-3">
+		  		Lorem 11 ipsum dolor sit amet consectetur adipisicing elit. Ex, itaque illum vero quia in, ducimus numquam! Delectus, dolore. Animi, sapiente.
+		  	</div>
+	  	</div>
+	</div>
+	<div class="card " >
+	  	<div class="card-header ">
+	  		<button class="btn btn-block text-left" data-toggle="collapse" data-target="#collapse_2"><b>Q.</b> ARE THERE ANY EXTRA CHARGES APPLIED WHEN ORDERING FROM FOODCIRCLES?</button>
+	  	</div>
+	  	<div id="collapse_2" class="c_color collapse" data-parent="#myaccordion">
+	  		<div class="card-body text-left ml-3">
+		  		Lorem 22 ipsum dolor sit amet consectetur adipisicing elit. Ex, itaque illum vero quia in, ducimus numquam! Delectus, dolore. Animi, sapiente.
+		  	</div>
+	  	</div>
+	</div>
+	<div class="card " >
+	  	<div class="card-header ">
+	  		<button class="btn btn-block text-left" data-toggle="collapse" data-target="#collapse_3"><b>Q.</b> CAN I MAKE A PRE-ORDER FOR LATER?</button>
+	  	</div>
+	  	<div id="collapse_3" class="c_color collapse" data-parent="#myaccordion">
+	  		<div class="card-body text-left ml-3">
+		  		Lorem 33 ipsum dolor sit amet consectetur adipisicing elit. Ex, itaque illum vero quia in, ducimus numquam! Delectus, dolore. Animi, sapiente.
+		  	</div>
+	  	</div>
+	</div>
+	<div class="card " >
+	  	<div class="card-header ">
+	  		<button class="btn btn-block text-left" data-toggle="collapse" data-target="#collapse_4"><b>Q.</b> HOW DO I PLACE AN ORDER ON FOODCIRCLES?</button>
+	  	</div>
+	  	<div id="collapse_4" class="c_color collapse" data-parent="#myaccordion">
+	  		<div class="card-body text-left ml-3">
+		  		Lorem 44 ipsum dolor sit amet consectetur adipisicing elit. Ex, itaque illum vero quia in, ducimus numquam! Delectus, dolore. Animi, sapiente.olor sit amet consectetur adipisicing elit. Ex, itaque illum
+		  	</div>
+	  	</div>
+	</div>
+	<div class="card " >
+	  	<div class="card-header ">
+	  		<button class="btn btn-block text-left" data-toggle="collapse" data-target="#collapse_5"><b>Q.</b> CAN I SAVE MORE THAN ONE ADDRESS TO MY FOODCIRCLES ACCOUNT?</button>
+	  	</div>
+	  	<div id="collapse_5" class="c_color collapse" data-parent="#myaccordion">
+	  		<div class="card-body text-left ml-3">
+		  		Lorem 55 ipsum dolor sit amet consectetur adipisicing elit. Ex, itaque illum vero quia in, ducimus numquam! Delectus, dolore. Animi, sapiente.
+		  	</div>
+	  	</div>
+	</div>
+  </div>
+
+
+  <!-- modal dialog box -->
+  <div id="mymodal" class="modal fade">
+  	<div class="modal-dialog modal-dialog-centered">
+  		<div class="modal-content">
+  			<div class="modal-header">
+  				<h3 class="modal-title">Welcome to our Restaurant</h3>
+  				<button class="close" data-dismiss="modal">
+  					<span>&times;</span>
+  				</button>
+  			</div>
+  			<div class="modal-body">
+  				<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Ex, hic.</p>
+  			</div>
+  			<div class="modal-footer">
+  				<button class="btn btn-danger" data-dismiss="modal">CLOSE</button>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+  
+  <!-- footer generally for all pages -->
+  <footer>
+  	<div class="footer-top pt-3">
+  		<div class="container">
+	  		<div class="row justify-content-center">
+	  			<div class="col-md-2 col-sm-3">
+	  				<h3>Need Help</h3>
+	  				<ul class="">
+	  					<li><a href="javascript:void(0)">Contact Us</a></li>
+	  					<li><a href="javascript:void(0)">Blog</a></li>
+	  					<li><a href="javascript:void(0)">FAQs</a></li>
+	  				</ul>
+	  			</div>
+	  			<div class="col-md-2 col-sm-3">
+	  				<h3>Useful links</h3>
+	  				<ul class="links">
+	  					<li><a href="javascript:void(0)">Home</a></li>
+	  					<li><a href="javascript:void(0)">About Us</a></li>
+	  					<li><a href="javascript:void(0)">Services</a></li>
+	  					<li><a href="javascript:void(0)">Terms of service</a></li>
+	  					<li><a href="javascript:void(0)">Privacy policy</a></li>
+	  				</ul>
+	  			</div>
+	  			<div class="col-md-3 col-sm-3">
+	  				<h3>Popular chinese</h3>
+	  				<ul class="">
+	  					<li><a href="javascript:void(0)">Drinks</a></li>
+	  					<li><a href="javascript:void(0)">Appetizers</a></li>
+	  					<li><a href="javascript:void(0)">Fast Food</a></li>
+	  					<li><a href="javascript:void(0)">Sandwich</a></li>
+	  					<li><a href="javascript:void(0)">Pizza</a></li>
+	  					<li><a href="javascript:void(0)">Salad</a></li>
+	  				</ul>
+	  			</div>
+	  			<div class="col-md-5">
+	  				<h3>Our Newsletter</h3>
+	  				<p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus minus fugit tempore autem ad doloremque veniam consequuntur nemo</p>
+	  				<div class="text-center">
+	  					<img src="img/logo.png" alt="brand_logo" width="60px" height="60px"><br>
+	  					<div id="social-logos">
+	  						<a href="javascript:void(0)" class="text-dark"><i class="fa fa-facebook"></i></a>
+		  					<a href="javascript:void(0)" class="text-dark"><i class="fa fa-instagram"></i></a>
+		  					<a href="javascript:void(0)" class="text-dark"><i class="fa fa-linkedin"></i></a>
+		  					<a href="javascript:void(0)" class="text-dark"><i class="fa fa-skype"></i></a>
+		  					<a href="javascript:void(0)" class="text-dark"><i class="fa fa-twitter"></i></a>
+		  					<a href="javascript:void(0)" class="text-dark"><i class="fa fa-google-plus"></i></a>
+	  					</div>
+	  				</div>
+	  			</div>
+	  		</div>
+	  	</div>
+  	</div>
+
+  	<div class="footer">
+  		<div class="container text-center">
+  			<div class="pt-3">
+  				© Copyright <b>FoodCircles</b>. All Rights Reserved
+  			</div>
+  			<div class="p-2">
+  				Designed by New Company
+  			</div>
+  		</div>
+  	</div>
+  </footer>
+
+</body>
+</html>
